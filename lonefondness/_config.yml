@@ -11,3 +11,6 @@ exclude:
   - .git
   - Gemfile
   - Gemfile.lock
+
+# Enable pretty URLs (e.g., /privacy/ instead of /privacy.html)
+permalink: /:title/

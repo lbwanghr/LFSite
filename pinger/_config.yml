@@ -3,3 +3,5 @@ title: Pinger
 description: Make Ping a Pleasure - Elegant network monitoring for iOS and macOS
 baseurl: "/pinger"
 url: "https://www.lonefondness.com"
+# Enable pretty URLs (e.g., /privacy/ instead of /privacy.html)
+permalink: /:title/

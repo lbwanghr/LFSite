@@ -28,15 +28,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '3.2'
+          bundler-cache: true
+      - name: Build lonefondness (root site)
+        run: |
+          cd lonefondness
+          bundle install
+          bundle exec jekyll build --destination ../_site
+          cd ..
+      - name: Build pinger (sub-site)
+        run: |
+          cd pinger
+          bundle install
+          bundle exec jekyll build --baseurl /pinger --destination ../_site/pinger
+          cd ..
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   # Deployment job
   deploy:
