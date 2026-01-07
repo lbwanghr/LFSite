@@ -4,7 +4,6 @@ title: Privacy Policy
 description: Pinger Privacy Policy
 ---
 
-<div class="content">
 
 # Privacy Policy
 
@@ -58,5 +57,3 @@ If we ever change this privacy policy, we will update this page and the "Last Up
 ## Contact
 
 Questions about privacy? Email us at: [support@lonefondness.com](mailto:support@lonefondness.com)
-
-</div>

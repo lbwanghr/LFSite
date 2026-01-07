@@ -7,7 +7,6 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    {% seo %}
 </head>
 <body>
     {{ content }}
@@ -18,7 +17,7 @@
             <div class="footer-links">
                 <a href="{{ '/privacy' | relative_url }}">Privacy Policy</a>
                 <a href="mailto:support@lonefondness.com">Contact Support</a>
-                <a href="/">Back to Main Site</a>
+                <a href="/pinger">Back to Main Site</a>
             </div>
         </div>
     </footer>

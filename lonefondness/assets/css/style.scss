@@ -1,0 +1,94 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// ===== Global Font and Background 全局字体与背景 =====
+body {
+  font-family: "Chalkboard SE", sans-serif;
+  color: #f5f5f5;
+  background-color: #2c1c11;
+}
+
+// ===== Links 下载链接 =====
+a {
+  color: #ffa96b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd9b3;
+  text-decoration: underline;
+}
+
+// ===== Page Header Custom Gradient 头部背景与主副标题 =====
+.page-header {
+  background: linear-gradient(to bottom, #893c1d, #2c1c11);
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.page-header h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.page-header h2 {
+  color: #f5e0cc;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+// ===== Buttons 头部按钮 =====
+.btn.icon {
+  background-color: #a85c3c;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  margin: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn.icon:hover {
+  background-color: #d46a3b;
+}
+
+// ===== Main Content Area 主题内容部分的标题 =====
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  color: #f4c29b;
+}
+
+// ===== Code Highlighting 代码高亮显示 =====
+.highlight pre {
+  background-color: #1f1f1f;
+  color: #f8f8f2;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+// ===== Footer 页脚 =====
+.site-footer {
+  margin-top: 3em;
+  padding: 1.5em;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ccc;
+  border-top: 1px solid #444;
+}
+
+.site-footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}

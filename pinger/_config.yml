@@ -3,36 +3,3 @@ title: Pinger
 description: Make Ping a Pleasure - Elegant network monitoring for iOS and macOS
 baseurl: "/pinger"
 url: "https://www.lonefondness.com"
-
-# 主题配置 - 使用 minima 或其他 GitHub Pages 支持的主题
-# 你可以选择：minima, cayman, slate, midnight, architect 等
-# 留空使用自定义主题
-theme: 
-
-# 排除文件
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-
-# Markdown 处理器
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# 永久链接格式
-permalink: pretty
-
-# 默认值
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-
-# 插件
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap

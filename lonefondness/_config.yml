@@ -1,0 +1,13 @@
+title: Lone Fondness
+description: A strategic 3-player card game where you build and clear descending sequences to score.
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+exclude:
+  - pinger
+  - vendor
+  - node_modules
+  - .github
+  - .git
+  - Gemfile
+  - Gemfile.lock
