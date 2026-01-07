@@ -14,3 +14,8 @@ exclude:
 
 # Enable pretty URLs (e.g., /privacy/ instead of /privacy.html)
 permalink: /:title/
+# Sass configuration to suppress deprecation warnings from the theme
+sass:
+  quiet_deps: true
+  load_paths:
+    - _sass

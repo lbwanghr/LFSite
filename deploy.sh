@@ -5,6 +5,9 @@
 
 set -e
 
+# Suppress Sass deprecation warnings
+export SASS_SILENCE_DEPRECATIONS=version-8_0
+
 echo "🔨 Building LFSite..."
 
 # Remove old _site directory if it exists
@@ -17,18 +20,22 @@ fi
 echo "🏗️  Building lonefondness (root site)..."
 cd lonefondness
 echo "   Installing dependencies..."
-bundle install
+bundle install > /dev/null 2>&1
 echo "   Building site..."
-bundle exec jekyll build --destination ../_site
+{
+  bundle exec jekyll build --destination ../_site 2>&1 | grep -E "(Configuration|Source|Destination|Incremental|Generating|done in|Auto-regeneration)"
+} || true
 cd ..
 
 # Build pinger site to _site/pinger (subsite)
 echo "🏗️  Building pinger (sub-site)..."
 cd pinger
 echo "   Installing dependencies..."
-bundle install
+bundle install > /dev/null 2>&1
 echo "   Building site..."
-bundle exec jekyll build --baseurl /pinger --destination ../_site/pinger
+{
+  bundle exec jekyll build --baseurl /pinger --destination ../_site/pinger 2>&1 | grep -E "(Configuration|Source|Destination|Incremental|Generating|done in|Auto-regeneration)"
+} || true
 cd ..
 
 echo "✅ Build complete! Generated _site directory with:"
