@@ -3,12 +3,13 @@
 本项目是一个 Jekyll 多站点托管设置，包含：
 - **根网站**: Lone Fondness (lonefondness/) - 3人卡牌游戏
 - **子网站**: Pinger (pinger/) - iOS/macOS 网络监测应用
+- **子网站**: iBoot (iboot/) - macOS 启动磁盘菜单栏快捷方式
 
 ## 本地开发
 
 ### 1. 生成静态网站
 
-运行部署脚本，该脚本会构建两个 Jekyll 站点到 `_site` 目录：
+运行部署脚本，该脚本会构建三个 Jekyll 站点到 `_site` 目录：
 
 ```bash
 ./deploy.sh
@@ -17,6 +18,7 @@
 输出结构：
 - `/` - lonefondness 站点
 - `/pinger` - Pinger 子站点
+- `/iboot` - iBoot 子站点
 
 ### 2. 本地测试
 
@@ -29,6 +31,7 @@
 然后访问：
 - **根站点**: http://localhost:4000
 - **子站点**: http://localhost:4000/pinger
+- **子站点**: http://localhost:4000/iboot
 
 ## GitHub Pages 部署
 
@@ -42,6 +45,7 @@
    - 安装 Ruby 依赖
    - 构建 lonefondness（输出到 `_site`）
    - 构建 pinger（输出到 `_site/pinger`）
+   - 构建 iboot（输出到 `_site/iboot`）
    - 上传构建产物到 GitHub Pages
 
 ### 手动触发
@@ -69,6 +73,12 @@ LFSite/
 │   ├── _layouts/
 │   ├── assets/
 │   └── ...
+├── iboot/                  # 子网站源代码
+│   ├── _config.yml
+│   ├── Gemfile
+│   ├── _layouts/
+│   ├── assets/
+│   └── ...
 ├── _site/                  # 生成的静态网站（git 忽略）
 ├── deploy.sh               # 构建脚本
 ├── serve-local.sh          # 本地服务脚本
@@ -84,6 +94,10 @@ LFSite/
 ### pinger/_config.yml
 - 设置 `baseurl: /pinger` 用于子路径托管
 - 自定义 HTML/CSS
+
+### iboot/_config.yml
+- 设置 `baseurl: /iboot` 用于子路径托管
+- 自定义 HTML/CSS，并包含 `BypassTPM.cmd` 以便脚本随站点发布
 
 ## 依赖
 

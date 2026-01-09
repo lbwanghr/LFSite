@@ -45,6 +45,12 @@ jobs:
           bundle install
           bundle exec jekyll build --baseurl /pinger --destination ../_site/pinger
           cd ..
+      - name: Build iboot (sub-site)
+        run: |
+          cd iboot
+          bundle install
+          bundle exec jekyll build --baseurl /iboot --destination ../_site/iboot
+          cd ..
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

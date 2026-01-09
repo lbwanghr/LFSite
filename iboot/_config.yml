@@ -1,0 +1,9 @@
+title: iBoot
+description: Menu bar shortcut to the macOS Startup Disk panel for fast, safe dual-booting.
+baseurl: "/iboot"
+url: "https://www.lonefondness.com"
+permalink: /:title/
+include:
+  - BypassTPM.cmd
+sass:
+  quiet_deps: true

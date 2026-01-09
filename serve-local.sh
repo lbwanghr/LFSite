@@ -15,6 +15,7 @@ echo "🚀 Starting local server..."
 echo "📍 Visit http://localhost:4000 in your browser"
 echo "   - Root site (lonefondness): http://localhost:4000"
 echo "   - Sub-site (pinger): http://localhost:4000/pinger"
+echo "   - Sub-site (iboot): http://localhost:4000/iboot"
 echo ""
 echo "Press Ctrl+C to stop the server"
 

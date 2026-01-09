@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      {% if page.hero.eyebrow %}<p class="eyebrow">{{ page.hero.eyebrow }}</p>{% endif %}
+      <h1>{{ page.hero.title }}</h1>
+      {% if page.hero.tagline %}<p class="lede">{{ page.hero.tagline }}</p>{% endif %}
+      <div class="cta-row">
+        {% if page.hero.primary_cta %}
+        <a class="btn primary" href="{{ page.hero.primary_cta.url }}">{{ page.hero.primary_cta.label }}</a>
+        {% endif %}
+        {% if page.hero.secondary_cta %}
+        <a class="btn ghost" href="{{ page.hero.secondary_cta.url }}">{{ page.hero.secondary_cta.label }}</a>
+        {% endif %}
+        {% if page.hero.tertiary_cta %}
+        <a class="btn text" href="{{ page.hero.tertiary_cta.url }}">{{ page.hero.tertiary_cta.label }}</a>
+        {% endif %}
+      </div>
+      <div class="meta-row">
+        <span class="chip">Startup Disk in one click</span>
+        <span class="chip">Geek mode ready</span>
+        <span class="chip">Intel Macs (Boot Camp)</span>
+        <span class="chip">Not for Apple silicon</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-head">
+        <p>How iBoot works</p>
+        <span class="pulse"></span>
+      </div>
+      <ol class="card-steps">
+        <li><strong>Pin to your menu bar</strong><span>iBoot lives next to Wi‑Fi and battery.</span></li>
+        <li><strong>Click to open Startup Disk</strong><span>Jump straight into the native macOS panel.</span></li>
+        <li><strong>Pick Windows & restart</strong><span>Safe, repeatable dual-boot flow every time.</span></li>
+      </ol>
+      <div class="card-footer">
+        <span class="status-dot"></span>
+        <span class="status-text">Built for people who swap OSes daily.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if page.pillars %}
+<section class="pillars">
+  <div class="pillars-grid">
+    {% for pillar in page.pillars %}
+    <article class="pillar">
+      <h3>{{ pillar.title }}</h3>
+      <p>{{ pillar.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="content-shell">
+  <div class="content">
+    {{ content }}
+  </div>
+</section>

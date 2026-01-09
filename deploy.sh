@@ -38,8 +38,20 @@ echo "   Building site..."
 } || true
 cd ..
 
+# Build iboot site to _site/iboot (sub-site)
+echo "🏗️  Building iboot (sub-site)..."
+cd iboot
+echo "   Installing dependencies..."
+bundle install > /dev/null 2>&1
+echo "   Building site..."
+{
+  bundle exec jekyll build --baseurl /iboot --destination ../_site/iboot 2>&1 | grep -E "(Configuration|Source|Destination|Incremental|Generating|done in|Auto-regeneration)"
+} || true
+cd ..
+
 echo "✅ Build complete! Generated _site directory with:"
 echo "   - lonefondness at /"
 echo "   - pinger at /pinger"
+echo "   - iboot at /iboot"
 echo ""
 echo "To serve locally: cd _site && python3 -m http.server 4000"

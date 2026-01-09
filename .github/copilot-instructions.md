@@ -2,7 +2,7 @@
 
 ## Project Overview
 LFSite is a Jekyll-based multi-site hosting setup:
-- **Root site**: Lone Fondness (a 3-player card game) - theme-based Jekyll at root
-- **Pinger sub-site**: Product site for network monitoring app (iOS/macOS), fully custom HTML/CSS, located in `/pinger/`
+- **Root site**: Lone Fondness at repository root.
+- **Sub-sites**: Each lives in its own folder (e.g., `/pinger`, `/iboot`, and future additions), each with its own Jekyll config, layouts, and assets.
 
-Both sites are independently deployed to GitHub Pages with separate configurations.
+Root and all sub-sites build into `_site` via `deploy.sh` and are deployed together to GitHub Pages.
