@@ -37,4 +37,4 @@ If you don't want to use this app, you can reset your Login Items page with the 
 `sfltool resetbtm`
 
 ---
-You can ask questions in Issues tab or email me directly at support@lonefondness.com.
+You can ask questions by emailing me directly at support@lonefondness.com.
