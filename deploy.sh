@@ -49,9 +49,21 @@ echo "   Building site..."
 } || true
 cd ..
 
+# Build power-event-wizard site to _site/power-event-wizard (sub-site)
+echo "🏗️  Building power-event-wizard (sub-site)..."
+cd power-event-wizard
+echo "   Installing dependencies..."
+bundle install > /dev/null 2>&1
+echo "   Building site..."
+{
+  bundle exec jekyll build --baseurl /power-event-wizard --destination ../_site/power-event-wizard 2>&1 | grep -E "(Configuration|Source|Destination|Incremental|Generating|done in|Auto-regeneration)"
+} || true
+cd ..
+
 echo "✅ Build complete! Generated _site directory with:"
 echo "   - lonefondness at /"
 echo "   - pinger at /pinger"
 echo "   - iboot at /iboot"
+echo "   - power-event-wizard at /power-event-wizard"
 echo ""
 echo "To serve locally: cd _site && python3 -m http.server 4000"

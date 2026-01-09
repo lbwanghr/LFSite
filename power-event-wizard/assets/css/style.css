@@ -1,0 +1,344 @@
+/* ==========================================================================
+   经典 macOS Aqua 风格样式表
+   灵感来自 macOS Big Sur 之前的经典 Aqua 界面
+   ========================================================================== */
+
+:root {
+  /* 经典 Aqua 配色 */
+  --aqua-blue: #4a90e2;
+  --aqua-blue-light: #7fb3f5;
+  --aqua-blue-dark: #2b5d99;
+  --aqua-gray: #e8e8e8;
+  --aqua-gray-light: #f5f5f5;
+  --aqua-gray-dark: #d4d4d4;
+  --window-bg: #ededed;
+  --content-bg: #ffffff;
+  --text-color: #333333;
+  --text-muted: #666666;
+  --border-color: #c0c0c0;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --toolbar-bg: linear-gradient(to bottom, #f9f9f9 0%, #e8e8e8 100%);
+  
+  /* Traffic lights 颜色 */
+  --red: #ff5f57;
+  --yellow: #ffbd2e;
+  --green: #28ca42;
+  
+  /* 字体 */
+  --system-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+}
+
+/* 全局重置 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--system-font);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: repeating-linear-gradient(
+    45deg,
+    #f0f0f0,
+    #f0f0f0 10px,
+    #f5f5f5 10px,
+    #f5f5f5 20px
+  );
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* 窗口容器 */
+.window {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--window-bg);
+  border-radius: 8px;
+  box-shadow: 
+    0 10px 50px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 标题栏 */
+.title-bar {
+  height: 40px;
+  background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 100%);
+  border-bottom: 1px solid #b8b8b8;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+}
+
+.traffic-lights {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.light.close {
+  background: radial-gradient(circle at 30% 30%, #ff8585, var(--red));
+}
+
+.light.minimize {
+  background: radial-gradient(circle at 30% 30%, #ffd76e, var(--yellow));
+}
+
+.light.maximize {
+  background: radial-gradient(circle at 30% 30%, #5de65d, var(--green));
+}
+
+.window-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* 工具栏 */
+.toolbar {
+  background: var(--toolbar-bg);
+  border-bottom: 1px solid #c0c0c0;
+  padding: 8px 15px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.toolbar nav {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 13px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:hover {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:active {
+  background: linear-gradient(to bottom, rgba(200, 200, 200, 0.7), rgba(220, 220, 220, 0.5));
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item .icon {
+  font-size: 16px;
+}
+
+/* 内容区域 */
+.content-area {
+  background: var(--content-bg);
+  padding: 30px 40px;
+  min-height: 500px;
+}
+
+.page-content {
+  max-width: 100%;
+}
+
+/* 排版样式 */
+.content-area h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--aqua-blue);
+}
+
+.content-area h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.content-area h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content-area p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.content-area a {
+  color: var(--aqua-blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.content-area a:hover {
+  color: var(--aqua-blue-dark);
+  border-bottom-color: var(--aqua-blue-dark);
+}
+
+.content-area ul,
+.content-area ol {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.content-area li {
+  margin-bottom: 8px;
+}
+
+.content-area code {
+  background: var(--aqua-gray-light);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "SF Mono", "Monaco", "Menlo", monospace;
+  font-size: 13px;
+  color: #c7254e;
+}
+
+.content-area pre {
+  background: #f8f8f8;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.content-area pre code {
+  background: none;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.content-area hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 30px 0;
+}
+
+.content-area blockquote {
+  border-left: 4px solid var(--aqua-blue);
+  padding-left: 20px;
+  margin: 20px 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* 状态栏 */
+.status-bar {
+  height: 24px;
+  background: linear-gradient(to bottom, #e8e8e8 0%, #d4d4d4 100%);
+  border-top: 1px solid #b8b8b8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 11px;
+  color: var(--text-muted);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.status-right {
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+  
+  .content-area {
+    padding: 20px 20px;
+  }
+  
+  .content-area h1 {
+    font-size: 26px;
+  }
+  
+  .content-area h2 {
+    font-size: 20px;
+  }
+  
+  .toolbar nav {
+    flex-wrap: wrap;
+  }
+  
+  .nav-item span:last-child {
+    display: none;
+  }
+  
+  .nav-item .icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .window-title {
+    font-size: 12px;
+  }
+  
+  .status-bar {
+    font-size: 10px;
+  }
+  
+  .content-area {
+    padding: 15px;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .window {
+    box-shadow: none;
+    border: none;
+  }
+  
+  .title-bar,
+  .toolbar,
+  .status-bar {
+    display: none;
+  }
+  
+  .content-area {
+    padding: 0;
+  }
+}
