@@ -32,25 +32,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: true
-      - name: Build lonefondness (root site)
+          bundler-cache: false
+      - name: Build all sites
         run: |
-          cd lonefondness
-          bundle install
-          bundle exec jekyll build --destination ../_site
-          cd ..
-      - name: Build pinger (sub-site)
-        run: |
-          cd pinger
-          bundle install
-          bundle exec jekyll build --baseurl /pinger --destination ../_site/pinger
-          cd ..
-      - name: Build iboot (sub-site)
-        run: |
-          cd iboot
-          bundle install
-          bundle exec jekyll build --baseurl /iboot --destination ../_site/iboot
-          cd ..
+          chmod +x deploy.sh
+          ./deploy.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
