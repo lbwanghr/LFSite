@@ -5,8 +5,7 @@
 
 set -e
 
-# Get the root directory (parent of scripts/)
-ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SITE_SRC="$ROOT_DIR/site"
 SITE_OUT="$ROOT_DIR/_site"
 

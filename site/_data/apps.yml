@@ -2,23 +2,31 @@
   slug: lonefondness
   tagline: A Strategic Card Game
   icon: lonefondness/icon.png
+  platforms:
+    - iOS
   app_store_url:
 
 - name: Pinger
   slug: pinger
   tagline: Make Ping a Pleasure
   icon: pinger/icon.png
+  platforms:
+    - iOS
+    - macOS
   app_store_url: https://apps.apple.com/app/pinger-make-ping-a-pleasure/id6504226128
-  mac_app_store_url: https://apps.apple.com/app/pinger-make-ping-a-pleasure/id6504226128
 
 - name: iBoot
   slug: iboot
   tagline: Boot into Windows Quickly
   icon: iboot/icon.png
-  mac_app_store_url: https://apps.apple.com/app/iboot/id6465744342
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/app/iboot/id6465744342
 
 - name: Power Event Wizard
   slug: power-event-wizard
   tagline: Scheduled Startup & Shutdown
   icon: power-event-wizard/icon.png
-  mac_app_store_url: https://apps.apple.com/app/power-event-wizard/id6503290654
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/app/power-event-wizard/id6503290654

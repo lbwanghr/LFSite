@@ -13,18 +13,11 @@ layout: default
         {% if app.tagline %}
         <p class="tagline">{{ app.tagline }}</p>
         {% endif %}
-        {% if app.app_store_url or app.mac_app_store_url %}
+        {% if app.app_store_url %}
         <div class="download-badges">
-            {% if app.app_store_url %}
             <a href="{{ app.app_store_url }}">
                 <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" class="badge">
             </a>
-            {% endif %}
-            {% if app.mac_app_store_url %}
-            <a href="{{ app.mac_app_store_url }}">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us" alt="Download on the Mac App Store" class="badge">
-            </a>
-            {% endif %}
         </div>
         {% endif %}
     </div>

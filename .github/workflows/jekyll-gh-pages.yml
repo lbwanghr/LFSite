@@ -33,10 +33,10 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: false
-      - name: Build all sites
+      - name: Build site
         run: |
-          chmod +x scripts/deploy.sh
-          ./scripts/deploy.sh
+          chmod +x deploy.sh
+          ./deploy.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
