@@ -10,7 +10,15 @@
       "Bash(wc:*)",
       "Bash(du -sh:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\n移除 MIT 许可证，切换为默认版权保留\n\n- 删除 LICENSE：仓库公开仅为 GitHub Pages 托管需要，内容版权保留\n- 删除 copilot-instructions.md：改用 CLAUDE.md 作为 AI 辅助指南\n- 新增 CLAUDE.md：项目记忆和开发指南\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\n移除 MIT 许可证，切换为默认版权保留\n\n- 删除 LICENSE：仓库公开仅为 GitHub Pages 托管需要，内容版权保留\n- 删除 copilot-instructions.md：改用 CLAUDE.md 作为 AI 辅助指南\n- 新增 CLAUDE.md：项目记忆和开发指南\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git mv:*)",
+      "Bash(chmod:*)",
+      "Bash(./deploy:*)",
+      "Bash(ls:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle config:*)",
+      "Bash(/Users/user/Documents/LFSite/deploy)",
+      "Bash(git reset:*)"
     ]
   }
 }

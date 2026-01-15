@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<header class="site-header">
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <p class="tagline">{{ site.description }}</p>
+    </div>
+</header>
+
+<section class="apps-section">
+    <div class="container">
+        <h2>Our Apps</h2>
+        <div class="apps-grid">
+            {% for app in site.data.apps %}
+            <a href="{{ app.slug | relative_url }}" class="app-card">
+                <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon" class="app-icon">
+                <h3>{{ app.name }}</h3>
+                <p class="app-tagline">{{ app.tagline }}</p>
+                <p class="app-description">{{ app.description }}</p>
+                <div class="app-platforms">
+                    {% for platform in app.platforms %}
+                    <span class="platform-badge">{{ platform }}</span>
+                    {% endfor %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% if content != "" %}
+<section class="content-section">
+    <div class="container">
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</section>
+{% endif %}

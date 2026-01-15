@@ -35,8 +35,8 @@ jobs:
           bundler-cache: false
       - name: Build all sites
         run: |
-          chmod +x deploy.sh
-          ./deploy.sh
+          chmod +x scripts/deploy.sh
+          ./scripts/deploy.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,47 +1,68 @@
 # LFSite 项目指南
 
 ## 项目概述
-这是一个 Jekyll 多站点项目，托管于 GitHub Pages (www.lonefondness.com)，采用单一代码库管理多个子站点。
+单一 Jekyll 站点，托管于 GitHub Pages (www.lonefondness.com)，展示多个 App Store 应用。
 
-## 站点结构
-- `lonefondness/` - 根站点（3人卡牌游戏）→ /
-- `pinger/` - 子站点（iOS/macOS 网络监测）→ /pinger
-- `iboot/` - 子站点（macOS 启动磁盘快捷方式）→ /iboot
-- `power-event-wizard/` - 子站点（macOS 电源调度）→ /power-event-wizard
+## 目录结构
+```
+/
+├── site/                       # Jekyll 站点源码
+│   ├── _config.yml             # 统一配置
+│   ├── _layouts/               # 共享布局
+│   ├── _data/apps.yml          # App 元数据
+│   ├── assets/css/style.css    # 统一样式
+│   ├── Gemfile                 # 唯一依赖文件
+│   ├── index.md                # 主站首页（聚合展示）
+│   │
+│   ├── lonefondness/           # 卡牌游戏 app
+│   │   ├── index.md
+│   │   ├── privacy.md
+│   │   ├── server.md
+│   │   └── icon.png            # App 图标
+│   ├── pinger/                 # 网络监测 app
+│   ├── iboot/                  # 启动磁盘快捷方式 app
+│   └── power-event-wizard/     # 电源调度 app
+│
+├── scripts/
+│   ├── deploy.sh
+│   └── serve.sh
+├── deploy                      # 便捷入口
+├── serve                       # 便捷入口
+└── _site/                      # 构建输出（gitignore）
+```
 
-## 核心工作流
+## 日常工作流
 
-### 日常维护
-只需编辑各站点目录下的 `.md` 文件，无需关心构建细节。
+### 维护内容
+编辑 `site/<app>/` 下的 `.md` 文件即可。
 
 ### 本地测试
 ```bash
-./deploy.sh      # 构建所有站点到 _site/
-./serve-local.sh # 启动本地服务器 http://localhost:4000
+./deploy    # 构建站点
+./serve     # 启动 http://localhost:4000
 ```
 
 ### 部署
-推送到 `main` 分支后，GitHub Actions 自动执行 `deploy.sh` 并部署到 GitHub Pages。
+推送到 `main` 分支，GitHub Actions 自动构建部署。
 
-## 添加新子站点清单
-1. 创建目录：`new-site/`
-2. 必要文件：
-   - `_config.yml` (必须设置 `baseurl: "/new-site"`)
-   - `_layouts/default.html`
-   - `Gemfile` (包含 jekyll, webrick, logger, csv, base64)
-   - `index.md` (front matter: `layout: page`)
-   - `privacy.md` (隐私政策)
-3. 更新脚本：
-   - `deploy.sh` - 添加构建段落
-   - `serve-local.sh` - 添加 URL 提示行
+## 添加新 App
+
+1. 创建 `site/new-app/` 目录
+2. 添加内容文件：
+   - `index.md`（App 介绍）
+   - `privacy.md`（隐私政策）
+   - `icon.png`（App 图标，建议 180x180 或更大）
+3. 在 `site/_data/apps.yml` 添加 App 元数据
+4. 在 `site/_config.yml` 的 defaults 中添加配置
+
+## App 图标规范
+
+- **位置**: `site/<app>/icon.png`
+- **格式**: PNG
+- **尺寸**: 建议 180x180 像素或更大（会自动缩放显示）
+- **样式**: 建议使用 App Store 图标，带圆角
 
 ## 技术要点
-- Jekyll 4.3 + Ruby
-- 使用 `SASS_SILENCE_DEPRECATIONS=version-8_0` 抑制 Sass 警告
-- 子站点通过 `--baseurl` 和 `--destination` 参数隔离构建
-- `_site/` 目录是构建产物，已被 .gitignore 忽略
-
-## 注意事项
-- 根站点 `_config.yml` 的 `exclude` 需排除所有子站点目录
-- 各站点 Gemfile 需包含 Ruby 4.0+ 兼容依赖
-- Markdown 文件头部需要 front matter（如 `layout: page`）
+- 单一 Jekyll 4.3 引擎
+- 共享布局和样式
+- `_data/apps.yml` 驱动首页聚合展示

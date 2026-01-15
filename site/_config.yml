@@ -1,0 +1,42 @@
+title: Lone Fondness
+description: Apps crafted with care
+url: "https://www.lonefondness.com"
+permalink: /:path/
+
+exclude:
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+
+include:
+  - iboot/BypassTPM.cmd
+
+sass:
+  quiet_deps: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "lonefondness"
+    values:
+      layout: app
+      app_slug: lonefondness
+  - scope:
+      path: "pinger"
+    values:
+      layout: app
+      app_slug: pinger
+  - scope:
+      path: "iboot"
+    values:
+      layout: app
+      app_slug: iboot
+  - scope:
+      path: "power-event-wizard"
+    values:
+      layout: app
+      app_slug: power-event-wizard

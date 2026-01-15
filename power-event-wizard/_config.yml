@@ -1,9 +1,0 @@
-title: Power Event Wizard
-description: Bring back the power scheduling feature to modern macOS
-baseurl: "/power-event-wizard"
-url: "https://www.lonefondness.com"
-permalink: /:title/
-
-# Sass configuration to suppress deprecation warnings
-sass:
-  quiet_deps: true

@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% assign app = site.data.apps | where: "slug", page.app_slug | first %}
+
+<header class="app-header">
+    <div class="container">
+        {% if app.icon %}
+        <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon" class="header-icon">
+        {% endif %}
+        <h1>{{ page.title | default: app.name }}</h1>
+        {% if page.tagline or app.tagline %}
+        <p class="tagline">{{ page.tagline | default: app.tagline }}</p>
+        {% endif %}
+        {% if app.app_store_url or app.mac_app_store_url %}
+        <div class="download-badges">
+            {% if app.app_store_url %}
+            <a href="{{ app.app_store_url }}">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" class="badge">
+            </a>
+            {% endif %}
+            {% if app.mac_app_store_url %}
+            <a href="{{ app.mac_app_store_url }}">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us" alt="Download on the Mac App Store" class="badge">
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</section>
+
+{% if app %}
+<section class="app-footer-section">
+    <div class="container">
+        <div class="app-links">
+            <a href="{{ app.slug | append: '/privacy' | relative_url }}">Privacy Policy</a>
+        </div>
+    </div>
+</section>
+{% endif %}
