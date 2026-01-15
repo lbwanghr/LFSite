@@ -40,7 +40,3 @@ The Startup Disk panel sometimes hides drives. Click the empty area where a disk
 ### iBoot not opening?
 
 Reported by under 1% of users. In every case I reviewed, the menu bar icon had appeared but went unnoticed. If you still hit an issue, send your About This Mac screenshot and a short demo video so I can investigate.
-
-## Support
-
-Questions or feedback? Email me at [support@lonefondness.com](mailto:support@lonefondness.com).

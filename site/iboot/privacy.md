@@ -30,7 +30,3 @@ Our Service does not address anyone under the age of 13. We do not knowingly col
 ## Changes
 
 If this policy changes, we will update this page with a new "Last updated" date.
-
-## Contact
-
-If you have any questions about this Privacy Policy, you can contact us by email: [support@lonefondness.com](mailto:support@lonefondness.com)

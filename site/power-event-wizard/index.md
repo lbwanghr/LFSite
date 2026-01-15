@@ -40,7 +40,3 @@ Generally speaking, there is no "0:00AM" or "0:00PM" in the 12-hour time format,
 
 If you don't want to use this app, you can reset your Login Items page with the following command in Terminal.
 `sfltool resetbtm`
-
----
-
-You can ask questions by emailing me directly at [support@lonefondness.com](mailto:support@lonefondness.com).

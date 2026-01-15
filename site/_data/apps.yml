@@ -4,7 +4,7 @@
   icon: lonefondness/icon.png
   platforms:
     - iOS
-  app_store_url:
+  app_store_url: https://apps.apple.com/app/lone-fondness/id6740745170
 
 - name: Pinger
   slug: pinger
@@ -13,7 +13,8 @@
   platforms:
     - iOS
     - macOS
-  app_store_url: https://apps.apple.com/app/pinger-make-ping-a-pleasure/id6504226128
+  app_store_url: https://apps.apple.com/app/pinger-network-monitor/id6642667162
+
 
 - name: iBoot
   slug: iboot

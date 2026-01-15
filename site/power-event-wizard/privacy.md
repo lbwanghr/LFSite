@@ -31,10 +31,6 @@ Since no data is transmitted or stored externally, your privacy is protected by 
 
 We may update this privacy policy from time to time. We will notify you of any changes by updating the "Last updated" date above.
 
-## Contact Us
-
-If you have any questions about this privacy policy, please contact us at: [support@lonefondness.com](mailto:support@lonefondness.com)
-
 ---
 
 For more information about macOS power scheduling, visit [Apple Support](https://support.apple.com/guide/mac-help/schedule-your-mac-to-turn-on-or-off-mchl40376151/mac).

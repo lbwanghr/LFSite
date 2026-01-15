@@ -49,7 +49,3 @@ Your data never leaves your device, so you have complete control.
 ## Changes to This Policy
 
 If we ever change this privacy policy, we will update this page and the "Last Updated" date above.
-
-## Contact
-
-Questions about privacy? Email us at: [support@lonefondness.com](mailto:support@lonefondness.com)
