@@ -9,9 +9,9 @@ layout: default
         {% if app.icon %}
         <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon" class="header-icon">
         {% endif %}
-        <h1>{{ page.title | default: app.name }}</h1>
-        {% if page.tagline or app.tagline %}
-        <p class="tagline">{{ page.tagline | default: app.tagline }}</p>
+        <h1>{{ app.name | default: page.title }}</h1>
+        {% if app.tagline %}
+        <p class="tagline">{{ app.tagline }}</p>
         {% endif %}
         {% if app.app_store_url or app.mac_app_store_url %}
         <div class="download-badges">
@@ -38,12 +38,11 @@ layout: default
     </div>
 </section>
 
-{% if app %}
-<section class="app-footer-section">
+<section class="app-nav-section">
     <div class="container">
-        <div class="app-links">
-            <a href="{{ app.slug | append: '/privacy' | relative_url }}">Privacy Policy</a>
+        <div class="app-nav">
+            <a href="{{ '/' | relative_url }}" class="nav-link">← All Apps</a>
+            <a href="{{ app.slug | append: '/privacy' | relative_url }}" class="nav-link">Privacy Policy</a>
         </div>
     </div>
 </section>
-{% endif %}

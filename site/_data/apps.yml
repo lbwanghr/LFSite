@@ -1,37 +1,24 @@
 - name: Lone Fondness
   slug: lonefondness
   tagline: A Strategic Card Game
-  description: A strategic 3-player card game where you build and clear descending sequences to score.
   icon: lonefondness/icon.png
-  platforms:
-    - iOS
   app_store_url:
 
 - name: Pinger
   slug: pinger
   tagline: Make Ping a Pleasure
-  description: Elegant and powerful network monitoring for iOS and macOS.
   icon: pinger/icon.png
-  platforms:
-    - iOS
-    - macOS
-  app_store_url: https://apps.apple.com/app/pinger
-  mac_app_store_url: https://apps.apple.com/app/pinger
+  app_store_url: https://apps.apple.com/app/pinger-make-ping-a-pleasure/id6504226128
+  mac_app_store_url: https://apps.apple.com/app/pinger-make-ping-a-pleasure/id6504226128
 
 - name: iBoot
   slug: iboot
   tagline: Boot into Windows Quickly
-  description: Menu bar shortcut to the macOS Startup Disk panel for fast, safe dual-booting.
   icon: iboot/icon.png
-  platforms:
-    - macOS
-  mac_app_store_url: https://apps.apple.com/app/apple-store/id6465744342?pt=123719714&ct=Github&mt=8
+  mac_app_store_url: https://apps.apple.com/app/iboot/id6465744342
 
 - name: Power Event Wizard
   slug: power-event-wizard
   tagline: Scheduled Startup & Shutdown
-  description: Bring back the power scheduling feature to modern macOS.
   icon: power-event-wizard/icon.png
-  platforms:
-    - macOS
-  mac_app_store_url: https://apps.apple.com/cn/app/scheduled-startup-wizard/id6503290654?mt=12
+  mac_app_store_url: https://apps.apple.com/app/power-event-wizard/id6503290654

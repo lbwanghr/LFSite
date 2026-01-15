@@ -18,7 +18,11 @@
       "Bash(bundle install:*)",
       "Bash(bundle config:*)",
       "Bash(/Users/user/Documents/LFSite/deploy)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(git stash:*)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch:*)"
     ]
   }
 }
