@@ -13,9 +13,10 @@ fi
 
 echo "Starting local server..."
 echo ""
-echo "Visit http://127.0.0.1:4000 in your browser"
+echo "Visit http://0.0.0.0:4000 in your browser"
+echo "(局域网设备可通过本机IP访问)"
 echo ""
 echo "Press Ctrl+C to stop"
 
 cd "$SITE_DIR"
-python3 -m http.server 4000 --bind 127.0.0.1
+python3 -m http.server 4000 --bind 0.0.0.0
