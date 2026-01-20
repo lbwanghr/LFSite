@@ -25,7 +25,9 @@
       "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch:*)",
       "Bash(/Users/user/Documents/LFSite/deploy.sh:*)",
       "Bash(git rm:*)",
-      "Bash(./deploy.sh:*)"
+      "Bash(./deploy.sh:*)",
+      "Bash(git push:*)",
+      "Bash(for icon in site/pinger/icon.png site/power-event-wizard/icon.png site/iboot/icon.png site/lonefondness/icon.png)"
     ]
   }
 }

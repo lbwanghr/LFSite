@@ -9,6 +9,7 @@ Elegant and powerful network monitoring for iOS and macOS.
 
 - **Real-time Monitoring** — Continuous ping monitoring for multiple servers with live latency display
 - **Smart Visualization** — Beautiful charts showing latency trends, supporting 10-minute, 1-hour, and 24-hour time scales
+- **Traceroute** - Visualize network paths, showing each hop node along with its latency
 - **Long-term Monitoring** — Support up to 30 days of continuous monitoring with complete data point recording
 - **History Export** — Export as .pgr format (reopenable for chart viewing) or .csv format (for data analysis)
 - **Multi-server Management** — Monitor multiple targets simultaneously with custom icons and names
