@@ -24,3 +24,5 @@ On your turn, you can perform one of the following actions:
 ## Private Server
 
 Want to host your own game server? Check out our [Private Server Guide](server/).
+
+[Read our Privacy Policy](privacy/).

@@ -550,37 +550,6 @@ body::before {
     line-height: 1;
 }
 
-/* =============================================================================
-   App Navigation Section
-   ============================================================================= */
-.app-nav-section {
-    padding: var(--space-lg) var(--space-lg);
-    background: var(--color-cream-dark);
-    border-top: 1px solid rgba(45, 42, 38, 0.06);
-}
-
-.app-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 720px;
-    margin: 0 auto;
-}
-
-.nav-link {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--color-charcoal-light);
-    text-decoration: none;
-    padding: var(--space-sm) var(--space-md);
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
-}
-
-.nav-link:hover {
-    color: var(--color-charcoal);
-    background: var(--color-amber-glow);
-}
 
 /* =============================================================================
    Footer
@@ -879,11 +848,6 @@ footer a:hover {
 
     .content h2::before {
         width: 3px;
-    }
-
-    .app-nav {
-        flex-direction: column;
-        gap: var(--space-sm);
     }
 
     .footer-links {

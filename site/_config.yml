@@ -36,6 +36,11 @@ defaults:
       layout: app
       app_slug: iboot
   - scope:
+      path: "winrun"
+    values:
+      layout: app
+      app_slug: winrun
+  - scope:
       path: "power-event-wizard"
     values:
       layout: app

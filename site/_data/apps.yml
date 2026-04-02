@@ -24,6 +24,14 @@
     - macOS
   app_store_url: https://apps.apple.com/app/iboot/id6465744342
 
+- name: WinRun
+  slug: winrun
+  tagline: Windows 11 on Your Mac
+  icon: winrun/icon.png
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/us/app/winrun/id6759135958
+
 - name: Power Event Wizard
   slug: power-event-wizard
   tagline: Scheduled Startup & Shutdown

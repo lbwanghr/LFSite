@@ -33,3 +33,5 @@ Your data stays on your device, always.
 - No iCloud sync to ensure data security and control
 - No third-party tracking or advertisements
 - Only accesses the target servers you specify during monitoring
+
+[Read our Privacy Policy](privacy/).
