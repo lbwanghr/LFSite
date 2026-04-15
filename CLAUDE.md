@@ -8,7 +8,8 @@
 /
 ├── site/                       # Jekyll 站点源码
 │   ├── _config.yml
-│   ├── _layouts/
+│   ├── _layouts/               # default, app, home, page
+│   ├── _includes/
 │   ├── _data/apps.yml          # App 元数据
 │   ├── assets/css/style.css
 │   ├── Gemfile
@@ -20,6 +21,7 @@
 │   │   └── icon.png
 │   ├── pinger/
 │   ├── iboot/
+│   ├── winrun/
 │   └── power-event-wizard/
 │
 ├── deploy.sh                   # 构建脚本

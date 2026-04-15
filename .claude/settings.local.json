@@ -27,7 +27,9 @@
       "Bash(git rm:*)",
       "Bash(./deploy.sh:*)",
       "Bash(git push:*)",
-      "Bash(for icon in site/pinger/icon.png site/power-event-wizard/icon.png site/iboot/icon.png site/lonefondness/icon.png)"
+      "Bash(for icon in site/pinger/icon.png site/power-event-wizard/icon.png site/iboot/icon.png site/lonefondness/icon.png)",
+      "Bash(gh api:*)",
+      "Bash(bundle update:*)"
     ]
   }
 }
