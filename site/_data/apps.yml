@@ -32,6 +32,14 @@
     - macOS
   app_store_url: https://apps.apple.com/us/app/winrun/id6759135958
 
+- name: SubWin
+  slug: subwin
+  tagline: Headless Win11 on Your Mac
+  icon: subwin/icon.png
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/us/app/subwin/id6761101481
+
 - name: Power Event Wizard
   slug: power-event-wizard
   tagline: Scheduled Startup & Shutdown

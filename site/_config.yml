@@ -41,6 +41,11 @@ defaults:
       layout: app
       app_slug: winrun
   - scope:
+      path: "subwin"
+    values:
+      layout: app
+      app_slug: subwin
+  - scope:
       path: "power-event-wizard"
     values:
       layout: app
