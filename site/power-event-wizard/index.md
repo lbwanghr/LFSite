@@ -1,6 +1,5 @@
 ---
 title: Power Event Wizard
-tagline: Scheduled Startup & Shutdown
 ---
 
 Bring back the power scheduling feature to modern macOS.

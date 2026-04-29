@@ -1,6 +1,5 @@
 ---
 title: SubWin
-tagline: Headless Win11 on Your Mac
 ---
 
 Run a headless Windows 11 virtual machine on your Apple Silicon Mac — access it anytime via Remote Desktop.
@@ -29,3 +28,7 @@ SubWin lives in your menu bar, out of your way. No windows, no dock icon — jus
 ## Privacy First
 
 Your data stays on your Mac, always. No accounts, no analytics, no server uploads. [Read our Privacy Policy](privacy/).
+
+## Support
+
+Questions, bug reports, or feature requests — email **[support@lonefondness.com](mailto:support@lonefondness.com)**. We typically respond within 1–2 business days.

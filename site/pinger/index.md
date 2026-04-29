@@ -1,6 +1,5 @@
 ---
 title: Pinger
-tagline: Make Ping a Pleasure
 ---
 
 Elegant and powerful network monitoring for iOS and macOS.

@@ -1,6 +1,5 @@
 ---
 title: Lone Fondness
-tagline: A Strategic Card Game
 ---
 
 ## Preparation

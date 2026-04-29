@@ -1,6 +1,5 @@
 ---
 title: iBoot
-tagline: Boot into Windows Quickly
 ---
 
 iBoot pins Startup Disk to your menu bar so you can switch systems quickly and safely—one click at a time.

@@ -26,7 +26,7 @@
 
 - name: WinRun
   slug: winrun
-  tagline: Windows 11 on Your Mac
+  tagline: Run Win11
   icon: winrun/icon.png
   platforms:
     - macOS
@@ -34,7 +34,7 @@
 
 - name: SubWin
   slug: subwin
-  tagline: Headless Win11 on Your Mac
+  tagline: Headless Win11
   icon: subwin/icon.png
   platforms:
     - macOS

@@ -1,6 +1,5 @@
 ---
 title: WinRun
-tagline: Windows 11 on Your Mac
 ---
 
 Run Windows 11 natively on your Apple Silicon Mac — no setup wizard, no configuration panels, no subscription.
