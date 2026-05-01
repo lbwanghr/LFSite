@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(for site in lonefondness pinger iboot power-event-wizard)",
+      "Bash(do)",
+      "Bash(echo:*)",
+      "Bash(__NEW_LINE_fcdb283d2532ed70__ ls -la /Users/user/Documents/LFSite/$site/)",
+      "Bash(done)",
+      "Bash(wc:*)",
+      "Bash(du -sh:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\n移除 MIT 许可证，切换为默认版权保留\n\n- 删除 LICENSE：仓库公开仅为 GitHub Pages 托管需要，内容版权保留\n- 删除 copilot-instructions.md：改用 CLAUDE.md 作为 AI 辅助指南\n- 新增 CLAUDE.md：项目记忆和开发指南\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git mv:*)",
+      "Bash(chmod:*)",
+      "Bash(./deploy:*)",
+      "Bash(ls:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle config:*)",
+      "Bash(/Users/user/Documents/LFSite/deploy)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(git stash:*)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch:*)",
+      "Bash(/Users/user/Documents/LFSite/deploy.sh:*)",
+      "Bash(git rm:*)",
+      "Bash(./deploy.sh:*)",
+      "Bash(git push:*)",
+      "Bash(for icon in site/pinger/icon.png site/power-event-wizard/icon.png site/iboot/icon.png site/lonefondness/icon.png)",
+      "Bash(gh api:*)",
+      "Bash(bundle update:*)"
+    ]
+  }
+}

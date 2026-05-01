@@ -1,0 +1,49 @@
+- name: Lone Fondness
+  slug: lonefondness
+  tagline: A Strategic Card Game
+  icon: lonefondness/icon.png
+  platforms:
+    - iOS
+  app_store_url: https://apps.apple.com/app/lone-fondness/id6740745170
+
+- name: Pinger
+  slug: pinger
+  tagline: Make Ping a Pleasure
+  icon: pinger/icon.png
+  platforms:
+    - iOS
+    - macOS
+  app_store_url: https://apps.apple.com/app/pinger-network-monitor/id6642667162
+
+
+- name: iBoot
+  slug: iboot
+  tagline: Boot into Windows Quickly
+  icon: iboot/icon.png
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/app/iboot/id6465744342
+
+- name: WinRun
+  slug: winrun
+  tagline: Run Win11
+  icon: winrun/icon.png
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/us/app/winrun/id6759135958
+
+- name: SubWin
+  slug: subwin
+  tagline: Headless Win11
+  icon: subwin/icon.png
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/us/app/subwin/id6761101481
+
+- name: Power Event Wizard
+  slug: power-event-wizard
+  tagline: Scheduled Startup & Shutdown
+  icon: power-event-wizard/icon.png
+  platforms:
+    - macOS
+  app_store_url: https://apps.apple.com/app/power-event-wizard/id6503290654

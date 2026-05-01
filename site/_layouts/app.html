@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% assign app = site.data.apps | where: "slug", page.app_slug | first %}
+
+<header class="app-header">
+    <div class="container">
+        {% if app.icon %}
+        <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon" class="header-icon">
+        {% endif %}
+        <h1>{{ app.name | default: page.title }}</h1>
+        {% if app.tagline %}
+        <p class="tagline">{{ app.tagline }}</p>
+        {% endif %}
+        {% if app.app_store_url %}
+        <div class="download-badges">
+            <a href="{{ app.app_store_url }}" target="_blank" rel="noopener">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" class="badge">
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</section>
